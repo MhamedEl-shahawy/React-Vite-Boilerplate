@@ -26,7 +26,10 @@ const excludePatterns = [
   'pnpm-lock.yaml',
   '.DS_Store',
   'Thumbs.db',
-  '*.log',
+  'npm-debug.log',
+  'yarn-debug.log',
+  'yarn-error.log',
+  'lerna-debug.log',
   'coverage',
   '.nyc_output',
   'playwright-report',
@@ -39,26 +42,24 @@ const excludePatterns = [
 ];
 
 // Files to process and update for template
-const filesToProcess = [
-  'package.json',
-  'README.md',
-  '.gitignore',
-];
+const filesToProcess = ['package.json', 'README.md', '.gitignore'];
 
 function shouldExclude(filePath, basePath) {
   const relativePath = path.relative(basePath, filePath);
-  
-  return excludePatterns.some(pattern => {
+
+  return excludePatterns.some((pattern) => {
     if (pattern.includes('*')) {
       // Handle glob patterns
       const regex = new RegExp(pattern.replace(/\*/g, '.*'));
       return regex.test(relativePath);
     }
-    
+
     // Handle exact matches and directory matches
-    return relativePath === pattern || 
-           relativePath.startsWith(pattern + '/') ||
-           path.basename(filePath) === pattern;
+    return (
+      relativePath === pattern ||
+      relativePath.startsWith(pattern + '/') ||
+      path.basename(filePath) === pattern
+    );
   });
 }
 
@@ -94,16 +95,16 @@ function processTemplateFiles() {
   const packageJsonPath = path.join(templateDir, 'package.json');
   if (fs.existsSync(packageJsonPath)) {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    
+
     // Remove CLI-specific fields
     delete packageJson.bin;
     delete packageJson.files;
-    
+
     // Reset name and version for template
     packageJson.name = 'my-react-app';
     packageJson.version = '0.1.0';
     packageJson.private = true;
-    
+
     // Remove CLI dependencies
     if (packageJson.devDependencies) {
       delete packageJson.devDependencies.chalk;
@@ -112,14 +113,14 @@ function processTemplateFiles() {
       delete packageJson.devDependencies.inquirer;
       delete packageJson.devDependencies.ora;
     }
-    
+
     // Remove CLI scripts
     if (packageJson.scripts) {
       delete packageJson.scripts.prepublishOnly;
       delete packageJson.scripts['build-template'];
       delete packageJson.scripts['test-cli'];
     }
-    
+
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     console.log('Processed: package.json');
   }
@@ -198,7 +199,7 @@ A modern, production-ready React application built with the React Vite Boilerpla
 
 ### Prerequisites
 
-- **Node.js** 20+ 
+- **Node.js** 20+
 - **npm/yarn/pnpm** (latest version)
 
 ### Installation
@@ -312,10 +313,12 @@ async function buildTemplate() {
   processTemplateFiles();
 
   console.log('\n✅ Template built successfully!');
-  console.log(`📦 Template location: ${path.relative(process.cwd(), templateDir)}`);
+  console.log(
+    `📦 Template location: ${path.relative(process.cwd(), templateDir)}`,
+  );
 }
 
-buildTemplate().catch(error => {
+buildTemplate().catch((error) => {
   console.error('❌ Error building template:', error);
   process.exit(1);
 });

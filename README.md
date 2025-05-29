@@ -20,23 +20,27 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 ## 🛠️ Tech Stack
 
 ### Core
+
 - **React 18** - UI library with latest features
 - **Vite** - Fast build tool and dev server
 - **TypeScript** - Type safety and better DX
 - **React Router 7** - Client-side routing
 
 ### State Management & Data Fetching
+
 - **TanStack Query** - Server state management
 - **Zustand** - Client state management
 - **React Hook Form** - Form handling with validation
 
 ### Styling & UI
+
 - **TailwindCSS** - Utility-first CSS framework
 - **Radix UI** - Accessible component primitives
 - **Lucide React** - Beautiful icons
 - **Class Variance Authority** - Component variants
 
 ### Development & Testing
+
 - **Vitest** - Unit testing framework
 - **Playwright** - E2E testing
 - **Storybook** - Component development
@@ -46,30 +50,66 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Quick Start (Recommended)
+
+Create a new project using our npm package:
+
+```bash
+# Using npm (recommended)
+npm create react-vite-boilerplate my-app
+
+# Using yarn
+yarn create react-vite-boilerplate my-app
+
+# Using pnpm
+pnpm create react-vite-boilerplate my-app
+
+# Direct usage with npx
+npx create-react-vite-boilerplate my-app
+```
+
+Then navigate to your project:
+
+```bash
+cd my-app
+npm install  # if not automatically installed
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see your app!
+
+### Manual Installation
+
+If you prefer to clone the repository directly:
+
+#### Prerequisites
 
 - **Node.js** 20+
 - **Yarn** 1.22+
 
-### Installation
+#### Installation Steps
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate.git
    cd React-Vite-Boilerplate
    ```
 
 2. **Install dependencies**
+
    ```bash
    yarn install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp .env.example .env
    ```
 
 4. **Start development server**
+
    ```bash
    yarn dev
    ```
@@ -80,22 +120,26 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 ## 📜 Available Scripts
 
 ### Development
+
 - `yarn dev` - Start development server
 - `yarn build` - Build for production
 - `yarn preview` - Preview production build
 - `yarn generate` - Generate new components with Plop
 
 ### Testing
+
 - `yarn test` - Run unit tests
 - `yarn test-e2e` - Run E2E tests
 - `yarn storybook` - Start Storybook dev server
 - `yarn build-storybook` - Build Storybook
 
 ### Code Quality
+
 - `yarn lint` - Run ESLint
 - `yarn check-types` - Type checking with TypeScript
 
 ### Mock Server
+
 - `yarn run-mock-server` - Start standalone mock API server
 
 ## � Documentation
@@ -103,11 +147,13 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 This project includes comprehensive architecture documentation organized into focused sections:
 
 ### 🎯 **Quick Start Documentation**
+
 - **[Architecture Overview](./docs/ARCHITECTURE_OVERVIEW.md)** - High-level architecture principles and patterns
 - **[Development Guide](./docs/DEVELOPMENT.md)** - Development workflow, tools, and setup
 - **[Security Implementation](./docs/SECURITY.md)** - Authentication, authorization, and security measures
 
 ### 📖 **Complete Documentation**
+
 For comprehensive architecture documentation, visit **[docs/README.md](./docs/README.md)** which provides:
 
 - **Core Architecture**: Application layers, data flow, and design patterns
@@ -116,6 +162,7 @@ For comprehensive architecture documentation, visit **[docs/README.md](./docs/RE
 - **Planning & Decisions**: Scalability considerations and architecture decisions (ADRs)
 
 ### 🔍 **Documentation Highlights**
+
 - **Feature-Based Architecture** - Modular, scalable code organization
 - **Security-First Design** - Multi-layer security implementation
 - **Performance Optimized** - Advanced caching and code splitting
@@ -159,6 +206,7 @@ src/
 ## 🎯 Key Features Overview
 
 ### Authentication System
+
 - **JWT-based authentication** with secure token handling
 - **Role-based access control** (Admin/User roles)
 - **Protected routes** with automatic redirects
@@ -166,6 +214,7 @@ src/
 - **Persistent sessions** with automatic token refresh
 
 ### Discussion System
+
 - **Create, read, update, delete discussions** (Admin only)
 - **Threaded comments** on discussions
 - **Markdown support** for rich text content
@@ -173,12 +222,14 @@ src/
 - **Permission-based actions** based on user roles
 
 ### User Management
+
 - **User profiles** with editable information
 - **User listing** with search and filtering
 - **Role management** and permissions
 - **Team-based organization**
 
 ### UI Components
+
 - **Design system** built with Radix UI primitives
 - **Accessible components** following WCAG guidelines
 - **Consistent styling** with TailwindCSS
@@ -188,6 +239,7 @@ src/
 ## 🧪 Testing Strategy
 
 ### Unit Testing (Vitest)
+
 - **Component testing** with React Testing Library
 - **Hook testing** for custom hooks
 - **Utility function testing**
@@ -195,6 +247,7 @@ src/
 - **Coverage reporting** for code quality metrics
 
 ### E2E Testing (Playwright)
+
 - **User flow testing** across different browsers
 - **Authentication flows** testing
 - **Critical path testing** for main features
@@ -202,6 +255,7 @@ src/
 - **CI/CD integration** ready
 
 ### Component Testing (Storybook)
+
 - **Component documentation** with interactive examples
 - **Visual testing** for UI components
 - **Accessibility testing** with a11y addon
@@ -210,17 +264,20 @@ src/
 ## 🔧 Development Tools
 
 ### Code Quality
+
 - **ESLint** - Comprehensive linting rules for React and TypeScript
 - **Prettier** - Consistent code formatting
 - **Husky** - Git hooks for pre-commit validation
 - **lint-staged** - Run linters on staged files only
 
 ### Type Safety
+
 - **TypeScript** - Full type coverage across the application
 - **Zod** - Runtime type validation for forms and API responses
 - **Type-safe routing** - Strongly typed route parameters and queries
 
 ### Developer Experience
+
 - **Vite** - Lightning-fast HMR and build times
 - **Path mapping** - Clean imports with @ alias
 - **Component generation** - Automated scaffolding with Plop
@@ -229,6 +286,7 @@ src/
 ## 🚀 Deployment
 
 ### Build for Production
+
 ```bash
 yarn build
 ```
@@ -236,6 +294,7 @@ yarn build
 The build artifacts will be stored in the `dist/` directory.
 
 ### Environment Variables
+
 Create a `.env` file based on `.env.example`:
 
 ```bash
@@ -249,6 +308,7 @@ VITE_ENABLE_API_MOCKING=true
 ```
 
 ### Static Deployment
+
 The application can be deployed to any static hosting service:
 
 - **Netlify** - Continuous deployment from Git
@@ -264,11 +324,13 @@ yarn generate
 ```
 
 This will prompt you to:
+
 1. Choose component type (UI component, feature component, etc.)
 2. Enter component name
 3. Select additional options (stories, tests, etc.)
 
 Generated components include:
+
 - TypeScript component file
 - Storybook stories
 - Unit tests
@@ -277,6 +339,7 @@ Generated components include:
 ## 🤝 Contributing
 
 ### Development Workflow
+
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
 3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
@@ -284,6 +347,7 @@ Generated components include:
 5. **Open** a Pull Request
 
 ### Code Standards
+
 - Follow the existing code style and patterns
 - Write meaningful commit messages
 - Add tests for new features
@@ -291,6 +355,7 @@ Generated components include:
 - Ensure all tests pass before submitting
 
 ### Architecture Principles
+
 - **Feature-based organization** - Group related files together
 - **Separation of concerns** - Keep business logic separate from UI
 - **Composition over inheritance** - Prefer composable components

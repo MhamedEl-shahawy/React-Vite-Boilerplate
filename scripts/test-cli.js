@@ -24,9 +24,9 @@ async function testCLI() {
 
     // Build template first
     console.log('🏗️  Building template...');
-    execSync('npm run build-template', { 
-      cwd: rootDir, 
-      stdio: 'inherit' 
+    execSync('npm run build-template', {
+      cwd: rootDir,
+      stdio: 'inherit',
     });
 
     // Test CLI with minimal options
@@ -48,12 +48,16 @@ async function testCLI() {
     const essentialFiles = [
       'package.json',
       'src/main.tsx',
-      'src/app/app.tsx',
+      'src/app/index.tsx',
+      'src/app/router.tsx',
+      'src/app/provider.tsx',
       'index.html',
       'vite.config.ts',
       'tailwind.config.cjs',
       '.env.example',
       'docs/README.md',
+      'src/features/auth/components/login-form.tsx',
+      'src/components/ui/button/button.tsx',
     ];
 
     console.log('🔍 Verifying essential files...');
@@ -68,9 +72,11 @@ async function testCLI() {
     // Verify package.json was updated
     const packageJsonPath = path.join(testProjectPath, 'package.json');
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    
+
     if (packageJson.name !== testProjectName) {
-      throw new Error(`Package name not updated. Expected: ${testProjectName}, Got: ${packageJson.name}`);
+      throw new Error(
+        `Package name not updated. Expected: ${testProjectName}, Got: ${packageJson.name}`,
+      );
     }
     console.log(`  ✓ package.json name updated to: ${packageJson.name}`);
 
@@ -104,7 +110,6 @@ async function testCLI() {
     console.log(`   cd ${testProjectName}`);
     console.log('   npm install');
     console.log('   npm run dev');
-
   } catch (error) {
     console.error('\n❌ CLI test failed:', error.message);
     process.exit(1);
@@ -125,7 +130,7 @@ process.on('SIGINT', cleanup);
 process.on('SIGTERM', cleanup);
 
 // Run test
-testCLI().catch(error => {
+testCLI().catch((error) => {
   console.error('❌ Test failed:', error);
   cleanup();
   process.exit(1);
