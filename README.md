@@ -55,14 +55,6 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 Create a new project using our npm package:
 
 ```bash
-# Using npm (recommended)
-npm create react-vite-boilerplate my-app
-
-# Using yarn
-yarn create react-vite-boilerplate my-app
-
-# Using pnpm
-pnpm create react-vite-boilerplate my-app
 
 # Direct usage with npx
 npx create-react-vite-boilerplate my-app
