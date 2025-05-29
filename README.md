@@ -1,6 +1,12 @@
 # React Vite Boilerplate
 
+[![npm version](https://badge.fury.io/js/create-react-vite-boilerplate.svg)](https://badge.fury.io/js/create-react-vite-boilerplate)
+[![npm downloads](https://img.shields.io/npm/dm/create-react-vite-boilerplate.svg)](https://www.npmjs.com/package/create-react-vite-boilerplate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A modern, production-ready React application boilerplate built with Vite, TypeScript, and enterprise-grade features. This boilerplate provides a solid foundation for building scalable web applications with authentication, role-based access control, and a comprehensive discussion system.
+
+📦 **[Available on npm](https://www.npmjs.com/package/create-react-vite-boilerplate)** - Install and use instantly without global installation!
 
 ## ✨ Features
 
