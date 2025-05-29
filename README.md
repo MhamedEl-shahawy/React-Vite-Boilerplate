@@ -98,7 +98,31 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 ### Mock Server
 - `yarn run-mock-server` - Start standalone mock API server
 
-## 📁 Project Structure
+## � Documentation
+
+This project includes comprehensive architecture documentation organized into focused sections:
+
+### 🎯 **Quick Start Documentation**
+- **[Architecture Overview](./docs/ARCHITECTURE_OVERVIEW.md)** - High-level architecture principles and patterns
+- **[Development Guide](./docs/DEVELOPMENT.md)** - Development workflow, tools, and setup
+- **[Security Implementation](./docs/SECURITY.md)** - Authentication, authorization, and security measures
+
+### 📖 **Complete Documentation**
+For comprehensive architecture documentation, visit **[docs/README.md](./docs/README.md)** which provides:
+
+- **Core Architecture**: Application layers, data flow, and design patterns
+- **Technical Implementation**: Network layer, security, and performance optimization
+- **Development & Operations**: Testing strategies, deployment, and CI/CD
+- **Planning & Decisions**: Scalability considerations and architecture decisions (ADRs)
+
+### 🔍 **Documentation Highlights**
+- **Feature-Based Architecture** - Modular, scalable code organization
+- **Security-First Design** - Multi-layer security implementation
+- **Performance Optimized** - Advanced caching and code splitting
+- **Comprehensive Testing** - Unit, integration, and E2E testing strategies
+- **Deployment Ready** - Multiple deployment options and CI/CD pipelines
+
+## �📁 Project Structure
 
 ```
 src/
