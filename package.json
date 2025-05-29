@@ -1,8 +1,48 @@
 {
-  "name": "react-Vite-Boilerplate",
+  "name": "create-react-vite-boilerplate",
   "version": "1.0.0",
-  "private": true,
+  "description": "A modern, production-ready React application boilerplate built with Vite, TypeScript, and enterprise-grade features",
   "type": "module",
+  "bin": {
+    "create-react-vite-boilerplate": "./bin/cli.js"
+  },
+  "files": [
+    "template",
+    "bin",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "boilerplate",
+    "template",
+    "starter",
+    "enterprise",
+    "authentication",
+    "tailwindcss",
+    "tanstack-query",
+    "testing",
+    "storybook"
+  ],
+  "author": {
+    "name": "Mohamed Shahawy",
+    "email": "Mohamed@thanawi.io",
+    "url": "https://github.com/MhamedEl-shahawy"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate#readme",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --base=/",
@@ -15,7 +55,11 @@
     "generate": "plop",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "run-mock-server": "vite-node mock-server.ts | pino-pretty -c"
+    "run-mock-server": "vite-node mock-server.ts | pino-pretty -c",
+    "prepublishOnly": "npm run build-template",
+    "build-template": "node scripts/build-template.js",
+    "test-cli": "node scripts/test-cli.js",
+    "test-cli-full": "TEST_INSTALL=true node scripts/test-cli.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -51,6 +95,11 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.2",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.15",
+    "ora": "^8.0.1",
     "@mswjs/data": "^0.16.1",
     "@mswjs/http-middleware": "^0.10.1",
     "@playwright/test": "^1.43.1",
