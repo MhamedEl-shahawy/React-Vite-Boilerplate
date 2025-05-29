@@ -56,14 +56,24 @@ A modern, production-ready React application boilerplate built with Vite, TypeSc
 
 ## 🚀 Getting Started
 
+### 📦 NPM Package
+
+**Package Name**: [`create-react-vite-boilerplate`](https://www.npmjs.com/package/create-react-vite-boilerplate)
+**Latest Version**: ![npm version](https://img.shields.io/npm/v/create-react-vite-boilerplate.svg)
+**Total Downloads**: ![npm downloads](https://img.shields.io/npm/dt/create-react-vite-boilerplate.svg)
+
 ### Quick Start (Recommended)
 
-Create a new project using our npm package:
+Create a new project using our npm package - **no global installation required**:
 
 ```bash
-
-# Direct usage with npx
+# ✅ RECOMMENDED: Direct usage with npx (always latest version)
 npx create-react-vite-boilerplate my-app
+
+# Alternative methods:
+npm create react-vite-boilerplate my-app
+yarn create react-vite-boilerplate my-app
+pnpm create react-vite-boilerplate my-app
 ```
 
 Then navigate to your project:
@@ -75,6 +85,38 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see your app!
+
+> 💡 **Why npx?** No global installation needed, always uses the latest version, and keeps your system clean!
+
+### 🌐 Installation Options
+
+#### Option 1: Direct Usage (Recommended)
+
+```bash
+npx create-react-vite-boilerplate my-app
+```
+
+- ✅ No global installation required
+- ✅ Always uses the latest version
+- ✅ Clean system (no permanent files)
+
+#### Option 2: Package Manager Create Commands
+
+```bash
+npm create react-vite-boilerplate my-app
+yarn create react-vite-boilerplate my-app
+pnpm create react-vite-boilerplate my-app
+```
+
+#### Option 3: Global Installation (Optional)
+
+```bash
+# Install globally (not recommended)
+npm install -g create-react-vite-boilerplate
+
+# Then use directly
+create-react-vite-boilerplate my-app
+```
 
 ### Manual Installation
 
@@ -360,6 +402,21 @@ Generated components include:
 - **Type safety** - Leverage TypeScript for better DX
 - **Performance** - Optimize for bundle size and runtime performance
 
+## 📦 NPM Package Information
+
+- **Package**: [`create-react-vite-boilerplate`](https://www.npmjs.com/package/create-react-vite-boilerplate)
+- **Repository**: [GitHub](https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate)
+- **Issues**: [Report Issues](https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate/issues)
+- **License**: MIT
+- **Author**: [Mohamed Shahawy](https://github.com/MhamedEl-shahawy)
+
+### Package Stats
+
+![npm version](https://img.shields.io/npm/v/create-react-vite-boilerplate.svg)
+![npm downloads](https://img.shields.io/npm/dm/create-react-vite-boilerplate.svg)
+![npm total downloads](https://img.shields.io/npm/dt/create-react-vite-boilerplate.svg)
+![license](https://img.shields.io/npm/l/create-react-vite-boilerplate.svg)
+
 ## 📄 License
 
 This project is licensed under the MIT License.
@@ -373,3 +430,10 @@ This project is licensed under the MIT License.
 ---
 
 **Built with ❤️ by [Mohamed Shahawy](https://github.com/MhamedEl-shahawy)**
+
+### 🔗 Links
+
+- 📦 [NPM Package](https://www.npmjs.com/package/create-react-vite-boilerplate)
+- 🐙 [GitHub Repository](https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate)
+- 📚 [Documentation](./docs/README.md)
+- 🐛 [Report Issues](https://github.com/MhamedEl-shahawy/React-Vite-Boilerplate/issues)
