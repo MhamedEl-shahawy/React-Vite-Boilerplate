@@ -300,8 +300,24 @@ async function buildTemplate() {
 
   // Remove existing template directory
   if (fs.existsSync(templateDir)) {
-    fs.removeSync(templateDir);
-    console.log('Removed existing template directory');
+    try {
+      fs.removeSync(templateDir);
+      console.log('Removed existing template directory');
+    } catch (error) {
+      console.log(
+        'Warning: Could not remove existing template directory, trying alternative method...',
+      );
+      // Try alternative removal method for Windows
+      try {
+        fs.emptyDirSync(templateDir);
+        fs.rmdirSync(templateDir);
+        console.log('Removed existing template directory (alternative method)');
+      } catch (altError) {
+        console.log(
+          'Warning: Could not remove template directory, will overwrite files...',
+        );
+      }
+    }
   }
 
   // Copy all files except excluded ones
