@@ -29,9 +29,7 @@ const Logo = () => {
   return (
     <Link className="flex items-center text-white" to={paths.home.getHref()}>
       <img className="h-8 w-auto" src={logo} alt="Workflow" />
-      <span className="text-sm font-semibold text-white">
-        Bulletproof React
-      </span>
+      <span className="text-sm font-semibold text-white">VB React</span>
     </Link>
   );
 };

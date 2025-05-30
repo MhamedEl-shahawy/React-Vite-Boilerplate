@@ -75,7 +75,7 @@ export function authenticate({
   throw error;
 }
 
-export const AUTH_COOKIE = `bulletproof_react_app_token`;
+export const AUTH_COOKIE = `vite_boilerplate_react_app_token`;
 
 export function requireAuth(cookies: Record<string, string>) {
   try {
